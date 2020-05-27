@@ -1,0 +1,44 @@
+const destinationCity = (paths) =>{
+   const map = new Map();
+
+  for (const path of paths) {
+    map.set(path[0], map.has(path[0]) ? 0 :-1);
+    map.set(path[1], map.has(path[1]) ? 0 :1);
+  }
+  
+
+  for (const item of map) {
+    console.log(item)
+    if (item[1] === 1) return item[0];
+  }
+ 
+}
+
+
+// const str = "444444444444"
+
+const format = (str) =>{
+    let  strarr = str.split('');
+  let index = 0;
+  
+  while(index < strarr.length){
+
+    strarr.splice(index, 0, '-');
+      index +=4;    
+
+  }
+  return strarr.join('');
+}
+  
+
+format("4444123456789012")
+
+
+
+
+
+
+
+
+
+
